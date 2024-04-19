@@ -45,34 +45,23 @@ struct ContentView: View {
                             Text(celda.VerCelda())
                                 .font(.system(size: 60))
                                 .foregroundColor(celda.VerColor())
-                                //.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,maxHeight: .infinity)
                                 .aspectRatio(1, contentMode:.fit)
                                 .background(Color.white)
-                                
+                            
                         }.onTapGesture {
                             juego.asignarCelda(fila, columna)
                         }
-//                        Text(celda.VerCelda())
-//                            .font(.system(size: 60))
-//                            .foregroundColor(celda.VerColor())
-//                            .bold()
-//                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,maxHeight: .infinity)
-//                            .aspectRatio(1, contentMode:.fit)
-//                            .background(Color.white)
-//                            .onTapGesture {
-//                                juego.asignarCelda(fila, columna)
-//                            }
                     }
                     
                 }
             }
         }
-        .background(Color.black)
+        .background(.clear)
         .padding()
-                .alert(isPresented: mostrarMensaje){
-                    Alert(title: Text(juego.mensajeAlerta),dismissButton: .default(Text("OK"), action: {juego.resetearTablero()}))
-                    
-                }
+        .alert(isPresented: mostrarMensaje){
+            Alert(title: Text(juego.mensajeAlerta),dismissButton: .default(Text("OK"), action: {juego.resetearTablero()}))
+            
+        }
         
         
         Text("Ceros: \(juego.puntuacionCeros)")
@@ -81,6 +70,7 @@ struct ContentView: View {
             .padding()
         Button(action:juego.resetearTablero, label: {
             Text("Reset")
+            Image(systemName: "repeat")
         })
     }
     
