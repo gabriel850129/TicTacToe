@@ -9,6 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(Juego.self) private var juego
+    var mostrarMensaje: Binding<Bool>{
+        Binding(
+            get: {
+                juego.mostrarMensaje
+            },
+            set: {
+                juego.mostrarMensaje = $0
+            }
+        )
+    }
     var body: some View {
         let borde = CGFloat(5)
         Text(juego.textoTurno())
@@ -24,7 +34,7 @@ struct ContentView: View {
         VStack{
             ForEach(0...2,id:\.self){ fila in
                 HStack(spacing:borde){
-                   
+                    
                     ForEach(0...2, id: \.self){columna in
                         let celda = juego.tablero[fila][columna]
                         Text(celda.VerCelda())
@@ -44,12 +54,10 @@ struct ContentView: View {
         }
         .background(Color.black)
         .padding()
-//        .alert(isPresented: $juego.mostrarMensaje){
-//            Alert(title: Text(juego.mostrarMensaje),
-//                  dismissButton: .default(Text("OK"))){
-//                juego.resetearTablero()
-//            }
-//        }
+                .alert(isPresented: mostrarMensaje){
+                    Alert(title: Text(juego.mensajeAlerta),dismissButton: .default(Text("OK")))
+                    
+                }
         
         
         Text("Ceros: \(juego.puntuacionCeros)")
@@ -62,7 +70,7 @@ struct ContentView: View {
     }
     
     
-
+    
 }
 
 #Preview {
