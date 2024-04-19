@@ -124,7 +124,7 @@ class Juego{
         if (tablero[fila][columna].tipoCelda != TipoCelda.Vacio){
             return
         }
-        
+        //tablero[fila][columna].tipoCelda = turno
         tablero[fila][columna].tipoCelda = turno == TipoCelda.Cruz ? TipoCelda.Cruz : TipoCelda.Cero
         
         if (verificarGanador()){
@@ -138,7 +138,9 @@ class Juego{
             let ganador = turno == TipoCelda.Cruz ? "Cruces(X) ": "Ceros(0) "
             mensajeAlerta = "Ganador: " + ganador
             mostrarMensaje = true
+            
         }else{
+            
             turno = turno == TipoCelda.Cruz ? TipoCelda.Cero : TipoCelda.Cruz
         }
         

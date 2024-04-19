@@ -37,16 +37,31 @@ struct ContentView: View {
                     
                     ForEach(0...2, id: \.self){columna in
                         let celda = juego.tablero[fila][columna]
-                        Text(celda.VerCelda())
-                            .font(.system(size: 60))
-                            .foregroundColor(celda.VerColor())
-                            .bold()
-                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,maxHeight: .infinity)
-                            .aspectRatio(1, contentMode:.fit)
-                            .background(Color.white)
-                            .onTapGesture {
-                                juego.asignarCelda(fila, columna)
-                            }
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(.white)
+                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,maxHeight: .infinity)
+                                .shadow(radius: 5)
+                            Text(celda.VerCelda())
+                                .font(.system(size: 60))
+                                .foregroundColor(celda.VerColor())
+                                //.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,maxHeight: .infinity)
+                                .aspectRatio(1, contentMode:.fit)
+                                .background(Color.white)
+                                
+                        }.onTapGesture {
+                            juego.asignarCelda(fila, columna)
+                        }
+//                        Text(celda.VerCelda())
+//                            .font(.system(size: 60))
+//                            .foregroundColor(celda.VerColor())
+//                            .bold()
+//                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,maxHeight: .infinity)
+//                            .aspectRatio(1, contentMode:.fit)
+//                            .background(Color.white)
+//                            .onTapGesture {
+//                                juego.asignarCelda(fila, columna)
+//                            }
                     }
                     
                 }
