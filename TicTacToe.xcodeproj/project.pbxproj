@@ -11,6 +11,8 @@
 		213401212BD1A3C800BC57E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213401202BD1A3C800BC57E9 /* ContentView.swift */; };
 		213401232BD1A3C900BC57E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213401222BD1A3C900BC57E9 /* Assets.xcassets */; };
 		213401262BD1A3C900BC57E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213401252BD1A3C900BC57E9 /* Preview Assets.xcassets */; };
+		216BB0372BD1A4F600A3FB4E /* Celda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216BB0362BD1A4F600A3FB4E /* Celda.swift */; };
+		216BB0392BD1A85600A3FB4E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216BB0382BD1A85600A3FB4E /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		213401202BD1A3C800BC57E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		213401222BD1A3C900BC57E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		213401252BD1A3C900BC57E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		216BB0362BD1A4F600A3FB4E /* Celda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celda.swift; sourceTree = "<group>"; };
+		216BB0382BD1A85600A3FB4E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				213401202BD1A3C800BC57E9 /* ContentView.swift */,
 				213401222BD1A3C900BC57E9 /* Assets.xcassets */,
 				213401242BD1A3C900BC57E9 /* Preview Content */,
+				216BB0362BD1A4F600A3FB4E /* Celda.swift */,
+				216BB0382BD1A85600A3FB4E /* Game.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216BB0372BD1A4F600A3FB4E /* Celda.swift in Sources */,
 				213401212BD1A3C800BC57E9 /* ContentView.swift in Sources */,
 				2134011F2BD1A3C800BC57E9 /* TicTacToeApp.swift in Sources */,
+				216BB0392BD1A85600A3FB4E /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
