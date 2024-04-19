@@ -32,8 +32,7 @@ struct Celda{
         case TipoCelda.Cruz:
             return Color.black
         case .Vacio:
-            return Color.black
-            
+            return .clear
         }
         
         

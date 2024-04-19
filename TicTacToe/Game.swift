@@ -135,8 +135,8 @@ class Juego{
             } else{
                 puntuacionCeros += 1
             }
-            let ganador = turno == TipoCelda.Cruz ? "Cruces(X)": "Ceros(0) "
-            mensajeAlerta = "Ganador" + ganador
+            let ganador = turno == TipoCelda.Cruz ? "Cruces(X) ": "Ceros(0) "
+            mensajeAlerta = "Ganador: " + ganador
             mostrarMensaje = true
         }else{
             turno = turno == TipoCelda.Cruz ? TipoCelda.Cero : TipoCelda.Cruz
@@ -144,7 +144,7 @@ class Juego{
         
         if (verificarEmpate()){
             mostrarMensaje=true
-            mensajeAlerta="Empate"
+            mensajeAlerta=" Empate!!"
         }
     }
     

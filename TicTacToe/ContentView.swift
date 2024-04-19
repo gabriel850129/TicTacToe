@@ -55,7 +55,7 @@ struct ContentView: View {
         .background(Color.black)
         .padding()
                 .alert(isPresented: mostrarMensaje){
-                    Alert(title: Text(juego.mensajeAlerta),dismissButton: .default(Text("OK")))
+                    Alert(title: Text(juego.mensajeAlerta),dismissButton: .default(Text("OK"), action: {juego.resetearTablero()}))
                     
                 }
         
